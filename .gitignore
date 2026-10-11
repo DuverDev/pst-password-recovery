@@ -1,0 +1,12 @@
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.pdb
+*.log
+.vs/
+_ReSharper*/
+packages/
+TestResults/
+*.DotSettings.user
