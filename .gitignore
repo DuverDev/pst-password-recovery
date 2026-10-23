@@ -10,3 +10,39 @@ _ReSharper*/
 packages/
 TestResults/
 *.DotSettings.user
+
+# Archivos de datos y bases de datos locales
+*.pst
+*.ost
+*.db
+*.sqlite
+*.sqlite3
+
+# Certificados, credenciales y secretos
+*.pfx
+*.p12
+*.key
+*.pem
+*.cer
+*.crt
+*.env
+*.env.*
+
+# Archivos temporales y de backup
+*.bak
+*.tmp
+*.swp
+*~
+
+# Preferencias y metadatos locales
+theme.txt
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Paquetes de distribución
+*.zip
+*.7z
+*.rar
+dist/
+release-package/

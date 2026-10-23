@@ -117,7 +117,7 @@
 
                 <TextBlock Grid.Column="1" VerticalAlignment="Center"
                            FontSize="10" Foreground="{StaticResource Brush.TextDim}" Opacity="0.6">
-                    v2.0.0
+                    v2.1.0
                 </TextBlock>
             </Grid>
         </Border>

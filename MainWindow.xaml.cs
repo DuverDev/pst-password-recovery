@@ -414,7 +414,7 @@ namespace PST_PasswordRecovery
 
             root.Children.Add(new TextBlock
             {
-                Text = "v2.0.0",
+                Text = "v2.1.0",
                 FontSize = 12,
                 Foreground = new SolidColorBrush(textDim != null ? textDim.Color : Colors.Gray),
                 Margin = new Thickness(0, 0, 0, 16)
