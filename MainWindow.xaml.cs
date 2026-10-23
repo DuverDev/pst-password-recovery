@@ -40,45 +40,52 @@ namespace PST_PasswordRecovery
 
         private void ApplyTheme()
         {
-            if (_isDarkTheme)
+            try
             {
-                SetBrush("Brush.PrimaryBg", "#0B141A");
-                SetBrush("Brush.SecondaryBg", "#111B21");
-                SetBrush("Brush.HeaderBg", "#1F2C34");
-                SetBrush("Brush.InputBg", "#2A3942");
-                SetBrush("Brush.Border", "#233138");
-                SetBrush("Brush.Accent", "#00A884");
-                SetBrush("Brush.AccentHover", "#06CF9C");
-                SetBrush("Brush.AccentDark", "#008069");
-                SetBrush("Brush.TextPrimary", "#E9EDEF");
-                SetBrush("Brush.TextDim", "#8696A0");
-                SetBrush("Brush.Hover", "#1A2A33");
-                ThemeToggleButton.Content = "Modo Claro";
+                if (_isDarkTheme)
+                {
+                    SetBrush("Brush.PrimaryBg", "#0B141A");
+                    SetBrush("Brush.SecondaryBg", "#111B21");
+                    SetBrush("Brush.HeaderBg", "#1F2C34");
+                    SetBrush("Brush.InputBg", "#2A3942");
+                    SetBrush("Brush.Border", "#233138");
+                    SetBrush("Brush.Accent", "#00A884");
+                    SetBrush("Brush.AccentHover", "#06CF9C");
+                    SetBrush("Brush.AccentDark", "#008069");
+                    SetBrush("Brush.TextPrimary", "#E9EDEF");
+                    SetBrush("Brush.TextDim", "#8696A0");
+                    SetBrush("Brush.Hover", "#1A2A33");
+                    ThemeToggleButton.Content = "Modo Claro";
+                }
+                else
+                {
+                    SetBrush("Brush.PrimaryBg", "#F0F2F5");
+                    SetBrush("Brush.SecondaryBg", "#FFFFFF");
+                    SetBrush("Brush.HeaderBg", "#FFFFFF");
+                    SetBrush("Brush.InputBg", "#F0F2F5");
+                    SetBrush("Brush.Border", "#D1D7DB");
+                    SetBrush("Brush.Accent", "#008069");
+                    SetBrush("Brush.AccentHover", "#00A884");
+                    SetBrush("Brush.AccentDark", "#006652");
+                    SetBrush("Brush.TextPrimary", "#111B21");
+                    SetBrush("Brush.TextDim", "#667781");
+                    SetBrush("Brush.Hover", "#E8E8E8");
+                    ThemeToggleButton.Content = "Modo Oscuro";
+                }
             }
-            else
-            {
-                SetBrush("Brush.PrimaryBg", "#F0F2F5");
-                SetBrush("Brush.SecondaryBg", "#FFFFFF");
-                SetBrush("Brush.HeaderBg", "#FFFFFF");
-                SetBrush("Brush.InputBg", "#F0F2F5");
-                SetBrush("Brush.Border", "#D1D7DB");
-                SetBrush("Brush.Accent", "#008069");
-                SetBrush("Brush.AccentHover", "#00A884");
-                SetBrush("Brush.AccentDark", "#006652");
-                SetBrush("Brush.TextPrimary", "#111B21");
-                SetBrush("Brush.TextDim", "#667781");
-                SetBrush("Brush.Hover", "#E8E8E8");
-                ThemeToggleButton.Content = "Modo Oscuro";
-            }
+            catch { }
         }
 
         private static void SetBrush(string key, string hex)
         {
-            var brush = Application.Current.Resources[key] as SolidColorBrush;
-            if (brush != null)
+            try
             {
-                brush.Color = (Color)ColorConverter.ConvertFromString(hex);
+                var color = (Color)ColorConverter.ConvertFromString(hex);
+                var brush = new SolidColorBrush(color);
+                brush.Freeze();
+                Application.Current.Resources[key] = brush;
             }
+            catch { }
         }
 
         private void LoadThemePreference()
@@ -414,7 +421,7 @@ namespace PST_PasswordRecovery
 
             root.Children.Add(new TextBlock
             {
-                Text = "v2.1.0",
+                Text = "v2.1.1",
                 FontSize = 12,
                 Foreground = new SolidColorBrush(textDim != null ? textDim.Color : Colors.Gray),
                 Margin = new Thickness(0, 0, 0, 16)

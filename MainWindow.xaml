@@ -6,8 +6,8 @@
         MinHeight="500" MinWidth="700"
         WindowStartupLocation="CenterScreen"
         FontFamily="Segoe UI"
-        Background="{StaticResource Brush.PrimaryBg}"
-        Foreground="{StaticResource Brush.TextPrimary}">
+        Background="{DynamicResource Brush.PrimaryBg}"
+        Foreground="{DynamicResource Brush.TextPrimary}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="52"/>
@@ -16,8 +16,8 @@
         </Grid.RowDefinitions>
 
         <!-- Header -->
-        <Border Grid.Row="0" Background="{StaticResource Brush.HeaderBg}"
-                BorderThickness="0,0,0,1" BorderBrush="{StaticResource Brush.Border}">
+        <Border Grid.Row="0" Background="{DynamicResource Brush.HeaderBg}"
+                BorderThickness="0,0,0,1" BorderBrush="{DynamicResource Brush.Border}">
             <Grid Margin="20,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -95,8 +95,8 @@
         </Grid>
 
         <!-- Footer -->
-        <Border Grid.Row="2" Background="{StaticResource Brush.SecondaryBg}"
-                BorderThickness="0,1,0,0" BorderBrush="{StaticResource Brush.Border}"
+        <Border Grid.Row="2" Background="{DynamicResource Brush.SecondaryBg}"
+                BorderThickness="0,1,0,0" BorderBrush="{DynamicResource Brush.Border}"
                 Padding="24,12">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -107,17 +107,17 @@
                 <StackPanel Grid.Column="0" VerticalAlignment="Center">
                     <TextBlock FontSize="11" Margin="0,0,0,2">
                         <Hyperlink NavigateUri="https://www.dmdevlabs.com" RequestNavigate="OpenWebsiteLink"
-                                   Foreground="{StaticResource Brush.Accent}" TextDecorations="None">
+                                   Foreground="{DynamicResource Brush.Accent}" TextDecorations="None">
                             www.dmdevlabs.com
                         </Hyperlink>
                     </TextBlock>
                     <TextBlock Text="Open Source - GPL-3.0 | DMDev Labs" FontSize="10"
-                               Foreground="{StaticResource Brush.TextDim}"/>
+                               Foreground="{DynamicResource Brush.TextDim}"/>
                 </StackPanel>
 
                 <TextBlock Grid.Column="1" VerticalAlignment="Center"
-                           FontSize="10" Foreground="{StaticResource Brush.TextDim}" Opacity="0.6">
-                    v2.1.0
+                           FontSize="10" Foreground="{DynamicResource Brush.TextDim}" Opacity="0.6">
+                    v2.1.1
                 </TextBlock>
             </Grid>
         </Border>
