@@ -1,0 +1,50 @@
+================================================================================
+  PST Password Recovery v2.2.0 — DMDev Labs
+  Recuperador de contraseñas para archivos Microsoft Outlook (.pst)
+================================================================================
+
+1. DESCRIPCIÓN
+--------------
+PST Password Recovery v2.2.0 es una aplicación portátil de Windows (WPF) que
+recupera contraseñas de archivos Microsoft Outlook (.pst) mediante análisis
+de colisión sobre el hash CRC-32 almacenado en la cabecera del archivo.
+
+Todo el procesamiento se ejecuta 100 % en memoria local y en modo de solo
+lectura: no modifica tu archivo .pst, no requiere instalación, no envía datos
+a servidores externos ni recopila telemetría.
+
+2. NOVEDADES DE LA VERSIÓN 2.2.0
+--------------------------------
+- Interfaz rediseñada en dos columnas (panel operativo e historial/KPIs).
+- Tema Claro activado por defecto (y Modo Oscuro conmutables desde la barra).
+- Selector de idioma ES / EN integrado.
+- Tres tarjetas KPI de diagnóstico (Tamaño, CRC-32, Tiempo) y tarjeta Hero
+  con botón directo para copiar la clave recuperada.
+- Historial de análisis de la sesión actual.
+
+3. MODO DE USO
+--------------
+1. Haz doble clic en PST_PasswordRecovery.exe (sin instalador).
+2. Pulsa "Buscar" y selecciona el archivo .pst protegido.
+3. Pulsa "Ejecutar Análisis".
+4. Cuando finalice la búsqueda CRC-32, usa "Copiar Clave" para llevar la
+   contraseña al portapapeles.
+
+4. REQUISITOS DEL SISTEMA
+-------------------------
+- Windows 10 / 11 (x86 o x64)
+- .NET Framework 4.0 o superior (incluido de serie en Windows)
+
+5. LICENCIA Y AVISO LEGAL
+-------------------------
+Distribuido bajo licencia GNU GPL-3.0 (ver archivo LICENSE incluido).
+El software se entrega estrictamente "TAL CUAL" (AS IS), sin garantías de
+ningún tipo. El usuario asume la responsabilidad legal exclusiva de usar esta
+herramienta únicamente sobre archivos .pst de su propiedad o analizados con
+autorización expresa y documentada de su titular legítimo.
+
+DMDev Labs (www.dmdevlabs.com) no está afiliado, patrocinado ni respaldado por
+Microsoft Corporation. Outlook es una marca registrada de Microsoft Corporation.
+
+Condiciones de uso completas: archivo TERMINOS.md incluido y
+https://dmdevlabs.com/terminos
